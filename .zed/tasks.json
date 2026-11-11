@@ -1,0 +1,108 @@
+[
+  {
+    "label": "Build: Editor",
+    "command": "xmake",
+    "args": ["build", "-y", "editor"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Build: Engine",
+    "command": "xmake",
+    "args": ["build", "-y", "byte-forge-engine"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Build: Sandbox",
+    "command": "xmake",
+    "args": ["build", "-y", "sandbox"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Build: All",
+    "command": "xmake",
+    "args": ["build", "-y"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Build: Rebuild All",
+    "command": "xmake",
+    "args": ["build", "-r", "-y"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Build: Clean",
+    "command": "xmake",
+    "args": ["clean"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Run: Editor",
+    "command": "xmake",
+    "args": ["run", "editor"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always"
+  },
+  {
+    "label": "Run: Sandbox",
+    "command": "xmake",
+    "args": ["run", "sandbox"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always"
+  },
+  {
+    "label": "Setup: Configure Debug",
+    "command": "xmake",
+    "args": ["f", "-m", "debug", "-y"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Setup: Configure Release",
+    "command": "xmake",
+    "args": ["f", "-m", "release", "-y"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Tools: Regenerate compile_commands.json",
+    "command": "xmake",
+    "args": ["project", "-k", "compile_commands", "."],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "View: Show Clean Files",
+    "command": "powershell",
+    "args": ["-NoProfile", "-Command", "Copy-Item -Force .zed/settings-templates/show-clean.json .zed/settings.json"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "never",
+    "hide": "on_success"
+  },
+  {
+    "label": "View: Show All Files",
+    "command": "powershell",
+    "args": ["-NoProfile", "-Command", "Copy-Item -Force .zed/settings-templates/show-all.json .zed/settings.json"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "reveal": "never",
+    "hide": "on_success"
+  }
+]

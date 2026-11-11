@@ -1,0 +1,11 @@
+# Build
+.xmake/
+build/
+
+# Tooling
+compile_commands.json
+.cache/
+.claude/
+
+# Editor
+imgui.ini

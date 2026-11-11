@@ -1,0 +1,10 @@
+# Checks
+Checks: >
+  -*,
+  bugprone-*,
+  performance-*,
+  readability-braces-around-statements,
+  -bugprone-easily-swappable-parameters
+
+# Scope
+HeaderFilterRegex: 'byte-forge-engine/.*'

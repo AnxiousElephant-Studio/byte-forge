@@ -1,0 +1,124 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "cwd": "${workspaceFolder}"
+  },
+  "presentation": {
+    "reveal": "always",
+    "panel": "shared"
+  },
+  "tasks": [
+    {
+      "label": "Build: Editor",
+      "type": "process",
+      "command": "xmake",
+      "args": ["build", "-y", "editor"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "label": "Build: Engine",
+      "type": "process",
+      "command": "xmake",
+      "args": ["build", "-y", "byte-forge-engine"],
+      "group": "build",
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "label": "Build: Sandbox",
+      "type": "process",
+      "command": "xmake",
+      "args": ["build", "-y", "sandbox"],
+      "group": "build",
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "label": "Build: All",
+      "type": "process",
+      "command": "xmake",
+      "args": ["build", "-y"],
+      "group": "build",
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "label": "Build: Rebuild All",
+      "type": "process",
+      "command": "xmake",
+      "args": ["build", "-r", "-y"],
+      "group": "build",
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "label": "Build: Clean",
+      "type": "process",
+      "command": "xmake",
+      "args": ["clean"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: Editor",
+      "type": "process",
+      "command": "xmake",
+      "args": ["run", "editor"],
+      "presentation": { "reveal": "always", "panel": "new" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: Sandbox",
+      "type": "process",
+      "command": "xmake",
+      "args": ["run", "sandbox"],
+      "presentation": { "reveal": "always", "panel": "new" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup: Configure Debug",
+      "type": "process",
+      "command": "xmake",
+      "args": ["f", "-m", "debug", "-y"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup: Configure Release",
+      "type": "process",
+      "command": "xmake",
+      "args": ["f", "-m", "release", "-y"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Debug: Prepare Editor",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Setup: Configure Debug", "Build: Editor"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Debug: Prepare Sandbox",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Setup: Configure Debug", "Build: Sandbox"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Tools: Regenerate compile_commands.json",
+      "type": "process",
+      "command": "xmake",
+      "args": ["project", "-k", "compile_commands", "."],
+      "problemMatcher": []
+    },
+    {
+      "label": "View: Show Clean Files",
+      "type": "process",
+      "command": "powershell",
+      "args": ["-NoProfile", "-Command", "Copy-Item -Force .vscode/settings-templates/show-clean.json .vscode/settings.json"],
+      "presentation": { "reveal": "never", "close": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "View: Show All Files",
+      "type": "process",
+      "command": "powershell",
+      "args": ["-NoProfile", "-Command", "Copy-Item -Force .vscode/settings-templates/show-all.json .vscode/settings.json"],
+      "presentation": { "reveal": "never", "close": true },
+      "problemMatcher": []
+    }
+  ]
+}

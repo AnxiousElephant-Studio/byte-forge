@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug: Editor",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/windows/x64/debug/editor.exe",
+      "cwd": "${workspaceFolder}/applications/editor",
+      "console": "integratedTerminal",
+      "preLaunchTask": "Debug: Prepare Editor"
+    },
+    {
+      "name": "Debug: Sandbox",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/windows/x64/debug/sandbox.exe",
+      "cwd": "${workspaceFolder}/applications/sandbox",
+      "console": "integratedTerminal",
+      "preLaunchTask": "Debug: Prepare Sandbox"
+    }
+  ]
+}

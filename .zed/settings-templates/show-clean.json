@@ -1,0 +1,46 @@
+{
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.xmake",
+    "**/.cache",
+    "**/.claude",
+    "build",
+    "compile_commands.json",
+    "**/imgui.ini",
+    "**/.clang-format",
+    "**/.clang-tidy",
+    "**/.clangd",
+    ".gitignore"
+  ],
+  "languages": {
+    "C++": {
+      "format_on_save": "off",
+      "tab_size": 4,
+      "hard_tabs": false
+    },
+    "C": {
+      "format_on_save": "off",
+      "tab_size": 4,
+      "hard_tabs": false
+    },
+    "Lua": {
+      "format_on_save": "off",
+      "tab_size": 4,
+      "hard_tabs": false
+    }
+  },
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "path": "C:/Program Files/LLVM/bin/clangd.exe",
+        "arguments": [
+          "--compile-commands-dir=.",
+          "--header-insertion=never",
+          "--background-index"
+        ]
+      }
+    }
+  }
+}

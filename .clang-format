@@ -1,0 +1,35 @@
+# Core
+BasedOnStyle: LLVM
+Language: Cpp
+Standard: c++20
+
+# Indentation
+UseTab: Never
+IndentWidth: 4
+NamespaceIndentation: All
+AccessModifierOffset: -4
+
+# Line width
+ColumnLimit: 0
+
+# Alignment
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveAssignments: Consecutive
+
+# Braces
+BreakBeforeBraces: Allman
+
+# Short statements
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+
+# Constructors
+BreakConstructorInitializers: BeforeComma
+
+# Pointers and references
+PointerAlignment: Left
+
+# Includes
+IncludeBlocks: Preserve
+SortIncludes:
+  Enabled: false

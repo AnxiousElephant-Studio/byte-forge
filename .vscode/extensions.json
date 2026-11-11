@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "ms-vscode.cpptools",
+    "tboox.xmake-vscode",
+    "slevesque.shader",
+    "sumneko.lua",
+    "eamodio.gitlens",
+    "usernamehw.errorlens",
+    "ms-vscode.vs-keybindings"
+  ],
+  "unwantedRecommendations": [
+    "ms-vscode.cmake-tools"
+  ]
+}
